@@ -50,6 +50,7 @@ public class LoginTests {
 
        ErrorDto errorDto = Provider.getInstance().getGson().fromJson(response.body().string(),ErrorDto.class);
        Object message  = errorDto.getMessage();
+        System.out.println(message);
        Assert.assertEquals(message,"Login or Password incorrect");
        Assert.assertEquals(errorDto.getStatus(),401);
 

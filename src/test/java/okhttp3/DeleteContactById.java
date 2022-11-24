@@ -46,7 +46,7 @@ public class DeleteContactById {
     }
 
     @Test
-    private void deleteContactByIdSuccess() throws IOException {
+    public void deleteContactByIdSuccess() throws IOException {
 
         Request request = new Request.Builder()
                 .url("https://contactapp-telran-backend.herokuapp.com/v1/contacts/"+id)

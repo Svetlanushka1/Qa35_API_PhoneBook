@@ -51,9 +51,11 @@ public class RegistrationTests {
         Assert.assertEquals(errorDto.getStatus(),400);
         Assert.assertEquals(errorDto.getError(),"Bad Request");
         Object mess = errorDto.getMessage();
+        System.out.println(mess);
+       // Assert.assertEquals(mess,"must be a well-formed email address");
         Assert.assertTrue(mess.toString().contains( "must be a well-formed email address"));
 
-
+// {username=must be a well-formed email address}   "must be a well-formed email address"
 
     }
 }
